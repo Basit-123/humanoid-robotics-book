@@ -66,7 +66,7 @@ By the end of this module, learners will be able to:
 ### 4. Contact Modeling
 - Point contacts vs. distributed contacts
 - Friction cones and force constraints
-
+- Coulomb friction: [Coulomb friction formula]
 - Impact dynamics (instantaneous collisions)
 
 **Why this matters for humanoids**: Contact with ground, objects, or obstacles is ubiquitous. Accurate contact modeling enables realistic simulation and control.
