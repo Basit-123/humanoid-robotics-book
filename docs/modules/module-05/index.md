@@ -166,7 +166,8 @@ Watch videos of Boston Dynamics Atlas recovering from pushes. Infer control stra
 | Walking gait analysis | 2 hours |
 | Atlas case study | 1.5 hours |
 | Problem Set 5 | 3 hours |
-| **Total** | **19.5 hours** |
+| **Total**         | **~19.5 hours** |
+|-------------------|-----------------|
 
 ---
 
