@@ -42,7 +42,7 @@ By the end of this module, learners will be able to:
 
 ### 1. Lagrangian Dynamics
 - Kinetic and potential energy formulation
-- Euler-Lagrange equations: $\frac{d}{dt}(\frac{\partial L}{\partial \dot{q}}) - \frac{\partial L}{\partial q} = \tau$
+- Euler-Lagrange equations: d/dt(∂L/∂q̇) - ∂L/∂q = τ
 - Deriving equations of motion
 - Mass matrix, Coriolis/centrifugal terms, gravity terms
 

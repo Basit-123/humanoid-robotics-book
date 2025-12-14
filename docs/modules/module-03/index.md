@@ -53,7 +53,7 @@ By the end of this module, learners will be able to:
 ### 2. State Representation
 
 **Topics**:
-- State vector $\mathbf{x}$: joint angles, velocities, positions, orientations
+- State vector **x**: joint angles, velocities, positions, orientations
 - Configuration space (C-space) vs. task space (end-effector position)
 - Observable vs. hidden state
 - State estimation: filters (Kalman, particle), sensor fusion
@@ -84,7 +84,7 @@ By the end of this module, learners will be able to:
 ### 5. Optimization as a Unifying Framework
 
 **Topics**:
-- Formulating problems as optimization: $\min_u J(x, u)$ subject to constraints
+- Formulating problems as optimization: minimize_u J(x, u) subject to constraints
 - Cost functions: Quadratic (energy), L1 (sparsity), task-specific
 - Constraints: Joint limits, collision avoidance, dynamics feasibility
 - Trajectory optimization preview

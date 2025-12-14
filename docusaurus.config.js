@@ -13,14 +13,14 @@ const config = {
   favicon: 'img/favicon.ico',
 
   // Set the production url of your site here
-  url: 'https://your-username.github.io',
+  url: 'https://basit-123.github.io',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: '/humanoid-robotics-book/',
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'your-org', // Usually your GitHub org/user name.
+  organizationName: 'Basit-123', // Usually your GitHub org/user name.
   projectName: 'humanoid-robotics-book', // Usually your repo name.
 
   onBrokenLinks: 'throw',
@@ -50,7 +50,7 @@ const config = {
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
-            'https://github.com/your-org/humanoid-robotics-book/tree/main/',
+            'https://github.com/Basit-123/humanoid-robotics-book/tree/main/',
         },
         blog: false, // Disable blog
         theme: {
@@ -79,7 +79,7 @@ const config = {
             label: 'Book',
           },
           {
-            href: 'https://github.com/your-org/humanoid-robotics-book',
+            href: 'https://github.com/Basit-123/humanoid-robotics-book',
             label: 'GitHub',
             position: 'right',
           },
@@ -106,7 +106,7 @@ const config = {
             items: [
               {
                 label: 'GitHub',
-                href: 'https://github.com/your-org/humanoid-robotics-book',
+                href: 'https://github.com/Basit-123/humanoid-robotics-book',
               },
             ],
           },
@@ -117,12 +117,6 @@ const config = {
         theme: prismThemes.github,
         darkTheme: prismThemes.dracula,
         additionalLanguages: ['python', 'bash', 'json'],
-      },
-      algolia: {
-        // Future: Add Algolia search configuration
-        appId: 'YOUR_APP_ID',
-        apiKey: 'YOUR_SEARCH_API_KEY',
-        indexName: 'YOUR_INDEX_NAME',
       },
       colorMode: {
         defaultMode: 'light',
