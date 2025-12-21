@@ -60,6 +60,14 @@ const config = {
     ],
   ],
 
+  themes: [
+    // Additional themes can be added here
+  ],
+
+  scripts: [
+    // Scripts can be added here if needed
+  ],
+
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({

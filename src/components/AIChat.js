@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-const JaaniChat = () => {
+const AIChat = () => {
   const [open, setOpen] = useState(false);
   const [messages, setMessages] = useState([
     {
