@@ -141,12 +141,13 @@ const AIChat = () => {
                     display: 'inline-block',
                     padding: '12px 18px',
                     borderRadius: '20px',
-                    backgroundColor: msg.sender === 'user' ? '#4f46e5' : '#e5e7eb',
-                    color: msg.sender === 'user' ? 'white' : '#111827',
+                    backgroundColor: msg.sender === 'user' ? '#4f46e5' : '#ffffff',
+                    color: msg.sender === 'user' ? 'white' : '#374151',
                     maxWidth: '80%',
                     boxShadow: '0 1px 3px rgba(0, 0, 0, 0.1)',
                     fontSize: '15px',
-                    lineHeight: '1.5'
+                    lineHeight: '1.5',
+                    border: msg.sender === 'user' ? 'none' : '1px solid #e5e7eb'
                   }}
                 >
                   {msg.text}
