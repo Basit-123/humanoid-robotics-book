@@ -4,7 +4,7 @@ const AIChat = () => {
   const [open, setOpen] = useState(false);
   const [messages, setMessages] = useState([
     {
-      text: 'Hello! I am AI Chatbot, your AI assistant for the "Physical AI & Humanoid Robotics" textbook. I can answer questions based on the book content. How may I assist you?',
+      text: 'Hello! I am the Physical AI Assistant, your professional guide for the "Physical AI & Humanoid Robotics" textbook. I can answer questions based on the book content. How may I assist you today?',
       sender: 'bot'
     }
   ]);
@@ -37,7 +37,7 @@ const AIChat = () => {
     } catch (error) {
       setMessages(prev => [
         ...prev,
-        { text: 'The assistant is currently unavailable. Please try again in a few moments.', sender: 'bot' }
+        { text: 'The Physical AI Assistant is currently unavailable. Please try again in a few moments.', sender: 'bot' }
       ]);
     }
     setLoading(false);
@@ -101,7 +101,7 @@ const AIChat = () => {
               alignItems: 'center'
             }}
           >
-            <span>Jaani - Textbook Assistant</span>
+            <span>Physical AI Assistant</span>
             <button
               onClick={() => setOpen(false)}
               style={{
@@ -141,13 +141,13 @@ const AIChat = () => {
                     display: 'inline-block',
                     padding: '12px 18px',
                     borderRadius: '20px',
-                    backgroundColor: msg.sender === 'user' ? '#4f46e5' : '#ffffff',
-                    color: msg.sender === 'user' ? 'white' : '#374151',
+                    backgroundColor: msg.sender === 'user' ? '#4f46e5' : '#f3f4f6',
+                    color: msg.sender === 'user' ? 'white' : '#1f2937',
                     maxWidth: '80%',
                     boxShadow: '0 1px 3px rgba(0, 0, 0, 0.1)',
                     fontSize: '15px',
                     lineHeight: '1.5',
-                    border: msg.sender === 'user' ? 'none' : '1px solid #e5e7eb'
+                    fontWeight: '400'
                   }}
                 >
                   {msg.text}
