@@ -11,7 +11,7 @@ const AIChat = () => {
   const [input, setInput] = useState('');
   const [loading, setLoading] = useState(false);
 
-  // Apna Render backend URL yahan daal (exact URL jo Render ne di hai)
+  // Backend API URL
   const BACKEND_URL = 'https://physical-ai-humanoid-robotics-rag-chatbot.onrender.com';
 
   const sendMessage = async () => {
@@ -25,19 +25,40 @@ const AIChat = () => {
     try {
       const response = await fetch(BACKEND_URL, {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
+        headers: {
+          'Content-Type': 'application/json',
+        },
         body: JSON.stringify({ message: input })
       });
 
-      if (!response.ok) throw new Error('Network error');
+      if (!response.ok) {
+        throw new Error(`Server error: ${response.status} ${response.statusText}`);
+      }
 
       const data = await response.json();
-      const botResponse = data.response || 'I could not generate a response. Please try again.';
+      if (!data || !data.response) {
+        throw new Error('Invalid response format from server');
+      }
+
+      const botResponse = data.response;
       setMessages(prev => [...prev, { text: botResponse, sender: 'bot' }]);
     } catch (error) {
+      console.error('Chat error:', error); // For debugging
+      let errorMessage = 'The Physical AI Assistant is currently unavailable. ';
+
+      if (error.message.includes('Network error') || error.message.includes('Failed to fetch')) {
+        errorMessage += 'Please check if the backend service is running.';
+      } else if (error.message.includes('404')) {
+        errorMessage += 'The API endpoint may not be available.';
+      } else if (error.message.includes('500')) {
+        errorMessage += 'The server encountered an error.';
+      } else {
+        errorMessage += 'Please try again in a few moments.';
+      }
+
       setMessages(prev => [
         ...prev,
-        { text: 'The Physical AI Assistant is currently unavailable. Please try again in a few moments.', sender: 'bot' }
+        { text: errorMessage, sender: 'bot' }
       ]);
     }
     setLoading(false);
